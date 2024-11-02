@@ -1,0 +1,12 @@
+[package]
+name = "example_backend"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+ic-cdk = "0.3"
+ic-cdk-macros = "0.3"
+candid = "0.7"
+serde = "1.0"
+serde_derive = "1.0"
+serde_cbor = "0.11"

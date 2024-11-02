@@ -1,0 +1,6 @@
+type Result = variant { Ok; Err: text };
+service : {
+    "get_balance": () -> (nat);
+    "send_tokens": (text, nat) -> (Result);
+    "receive_tokens": (nat) -> ();
+}

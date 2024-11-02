@@ -1,0 +1,19 @@
+{
+  "canisters": {
+    "example_backend": {
+      "type": "rust",
+      "candid": "src/example_backend/example_backend.did",
+      "wasm": "target/wasm32-unknown-unknown/release/example_backend.wasm"
+    },
+    "example_frontend": {
+      "type": "assets",
+      "source": ["src/example_frontend/assets"]
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000"
+    }
+  },
+  "version": 1
+}
