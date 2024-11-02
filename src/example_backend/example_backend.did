@@ -1,6 +1,4 @@
-type Result = variant { Ok; Err: text };
-service : {
-    "get_balance": () -> (nat);
-    "send_tokens": (text, nat) -> (Result);
-    "receive_tokens": (nat) -> ();
-}
+type Account = record { owner : principal; subaccount : opt vec nat8 };
+type Result = variant { Ok : nat; Err : text };
+type TransferArgs = record { to_account : Account; amount : nat };
+service : { transfer : (TransferArgs) -> (Result) }
